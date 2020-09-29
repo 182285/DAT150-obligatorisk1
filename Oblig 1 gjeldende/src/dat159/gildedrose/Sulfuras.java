@@ -1,18 +1,18 @@
 package dat159.gildedrose;
 
-public class Sulfuras extends Item2 {
-
-	public Sulfuras(int sellIn, int quality) {
+public class Sulfuras extends Item {
+	public Sulfuras(String name, int sellIn, int quality) {
 		super("Sulfuras", sellIn, quality);
 	}
 	@Override
-	public void increaseQtyOnQty() {
+	public void updateQtyOnQty() {
 		quality ++;
 	}
 	
 	@Override
-	public void changeSellInOnQty() {
-		//NOTHING
+	public void updateSellIn() {
+		//DO nothing
 	}
-
+	
+	
 }

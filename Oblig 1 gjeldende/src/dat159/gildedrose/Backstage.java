@@ -1,22 +1,32 @@
 package dat159.gildedrose;
 
-public class Backstage extends Item2 {
+public class Backstage extends Item {
 
-	public Backstage(int sellIn, int quality) {
+	public Backstage(String name, int sellIn, int quality) {
 		super("Backstage", sellIn, quality);
 	}
-	
+
 	@Override
-	public void increaseQtyOnQty() {
-		if(isHighQuality()) {
-			quality ++;
+	public void updateQtyOnQty() {
+		increaseQty();
+		if (sellIn < 11) {
+			increaseQty();
 		}
-		if(sellIn<11) {
-			quality ++;
+		if (sellIn < 6) {
+			increaseQty();
 		}
-		if(sellIn<6) {
+	}
+
+	private void increaseQty() {
+		if (highQty()) {
 			quality++;
 		}
 	}
-
+	
+	@Override
+	void updateQtyOnSellIn() {
+		if(sellIn<0) {
+			quality = 0;
+		}
+	}
 }
