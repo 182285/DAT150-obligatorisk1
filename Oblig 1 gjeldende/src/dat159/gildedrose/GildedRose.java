@@ -10,10 +10,9 @@ class GildedRose {
 
 	void updateQuality() {
 		for (Item item : items) {
-			if (normalItem(item)) {
-				if (qualityLow(item)) {
+			if (normalItem(item)&&(qualityLow(item))) {
 					item.quality = item.quality - 1;
-				}
+				
 			} else {
 				if (qualityHigh(item)) {
 					item.quality = item.quality + 1;

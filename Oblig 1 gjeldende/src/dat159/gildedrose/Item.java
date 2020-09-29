@@ -18,22 +18,4 @@ public class Item {
    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
-
-
-public void decreaseQuality() {
-	// TODO Auto-generated method stub
-	
-}
-
-public void increaseQuality() {
-	// TODO Auto-generated method stub
-	
-}
-
-
-
-public void decreaseSellIn() {
-	// TODO Auto-generated method stub
-	
-}
 }
